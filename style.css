@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    height: 5vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    
+    
+}
+
+h1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+
+
+#idCharacter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+/* 
+#filter{
+    width: 150px;
+    height: 150px;
+    /* display:flex; */
+    /* flex-wrap: nowrap;
+    align-items: center;
+  
+    gap: 10px;
+    
+} */ 

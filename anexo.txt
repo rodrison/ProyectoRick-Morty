@@ -1,0 +1,32 @@
+
+filter = filtros de botones
+allfilter = filtro Todos
+womenfilter = filtro Mujeres
+menfilter = filtro Hombres
+genderlessfilter = filtro sin Genero
+unknownfilter = filtro Desconocido
+
+totalCharacter = personajes totales
+idCharacter = caracteristicas de personajes
+itemCharacter = caracteristicas del personaje
+character =  personajes
+
+actualPage = pagina actual
+totalPage = paginas totales
+
+Paginado
+
+buttonCurrentWebsite - firstWebPage = primera pagina
+buttonPreviousPageWeb - previousPageWeb = pagina anterior
+buttonNextWebPage - nextWebPage = pagina siguente
+buttonLastPageWeb - lastPageWeb = ultima pagina
+
+automaticPageCut = limitador automatico de botones
+
+
+askWebsite = consulta a la pagina
+OrderWebsite = pedido a la pagina
+currentWebsite = pagina actual
+webSide = pagina web
+showMeOnHtml = mostrar en el html
+information = informacion que extriago de la api usando el fetch
