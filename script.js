@@ -10,15 +10,17 @@ function showMeOnHtml(arrCharacter) {
   arrCharacter.forEach((itemCharacter) => {
     idCharacter.innerHTML += `<div class="idCharacter">
                                       <div>
-                                        <img src=${itemCharacter.image}>
+                                        <img class="imagin" src=${itemCharacter.image}>
                                       </div>
-                                    <p>Nombre: ${itemCharacter.name}</p>
-                                    <p>Genero: ${itemCharacter.gender}</p>
-                                    <p>Species: ${itemCharacter.species}</p>
-                                    <p>Status: ${itemCharacter.status}</p>
-                                    <p>Origin: ${itemCharacter.origin}</p>
-                                    <p>Location ${itemCharacter.location}</p>
-                                      <div>
+                                        <div class="figure">
+                                          <p>Nombre: ${itemCharacter.name}</p>
+                                          <p>Genero: ${itemCharacter.gender}</p>
+                                          <p>Species: ${itemCharacter.species}</p>
+                                          <p>Status: ${itemCharacter.status}</p>
+                                          <p>Origin: ${itemCharacter.origin}</p>
+                                          <p>Location ${itemCharacter.location}</p>
+                                        </div>  
+                                      <div class="viewPlus">
                                         <p class="verMas">VER MAS...</p>
                                       </div>
                               </div>`;

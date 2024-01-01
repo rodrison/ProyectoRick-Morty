@@ -6,6 +6,10 @@ menfilter = filtro Hombres
 genderlessfilter = filtro sin Genero
 unknownfilter = filtro Desconocido
 
+viewPlus = ver mas
+figure = descripcion de figuras
+imagin = imagen
+
 totalCharacter = personajes totales
 idCharacter = caracteristicas de personajes
 itemCharacter = caracteristicas del personaje
