@@ -36,22 +36,24 @@ function askWebSite (webSide) {
     fetch('https://rickandmortyapi.com/api/character/?page='+webSide)
         .then((information) => {
           return information.json();
-        }).then((information) => {
+        })
+        .then((information) => {
           totalCharacter = information.results;
-          OrderWebsite(totalCharacter);
+          // OrderWebsite(totalCharacter);
+          showMeOnHtml(totalCharacter);
         })
 };
 
 askWebSite(currentWebSite);
 
-//botones filtros
+//botones filtros de genero
 let buttonfilterall = document.getElementById("allfilter");
 let buttonfilterwomen = document.getElementById("womenfilter");
 let buttonfiltermen = document.getElementById("menfilter");
 let buttonfiltergenderless = document.getElementById("genderlessfilter");
 let buttonfilterunknown = document.getElementById("unknownfilter");
 
-//creacion del evento boton
+//creacion del evento boton filtros de genero
 
 buttonfilterwomen.addEventListener("click", womenfilter);
 buttonfiltermen.addEventListener("click", menfilter);
@@ -59,7 +61,7 @@ buttonfilterall.addEventListener("click", allfilter);
 buttonfiltergenderless.addEventListener("click", genderlessfilter);
 buttonfilterunknown.addEventListener("click", unknownfilter);
 
-//funciones para los filtros
+//funciones para los filtros de genero
 
 function womenfilter() {
   let women = totalCharacter.filter((itemCharacter) => {
@@ -96,68 +98,45 @@ function allfilter() {
 
 //botones para cambio de paginas
 let buttonCurrentWebsite = document.getElementById("firstWebPage");
-let buttonNextWebPage = document.getElementById("nextWebPage");
 let buttonPreviousPageWeb = document.getElementById("previousPageWeb");
+let buttonNextWebPage = document.getElementById("nextWebPage");
 let buttonLastPageWeb = document.getElementById("lastPageWeb");
 
 buttonCurrentWebsite.addEventListener("click", firstWebPage);
-buttonNextWebPage.addEventListener("click", nextWebPage);
 buttonPreviousPageWeb.addEventListener("click", previousPageWeb);
+buttonNextWebPage.addEventListener("click", nextWebPage);
 buttonLastPageWeb.addEventListener("click", lastPageWeb);
-
-
 
 
 function firstWebPage() {
   currentWebSite = 1;
   askWebSite(1);
   automaticPageCut(currentWebSite);
-
-  // if(currentWebSite===1){
-  //   buttonPreviousPageWeb.disabled=true
-  //   buttonCurrentWebsite.disabled=true
-  // } else {
-  //   buttonNextWebPage.disabled=false
-  //   buttonLastPageWeb.disabled=false
-  // }
-  // currentWebSite(1);
-  console.log(currentWebSite);
+  // console.log(currentWebSite);
 }
 
 function nextWebPage() {
   currentWebSite++;
   askWebSite(currentWebSite);
   automaticPageCut(currentWebSite);
-
-  // if(currentWebSite===42){
-  //   buttonNextWebPage.disabled=true
-  //   buttonLastPageWeb.disabled=true
-  // } else {
-  //   buttonPreviousPageWeb.disabled=false
-  //   buttonCurrentWebsite.disabled=false
-  // }
-  
-  // orderWebPage(currentWebSite);
-  console.log(currentWebSite);
+  // console.log(currentWebSite);
 }
 
 function previousPageWeb() {
   currentWebSite--;
   askWebSite(currentWebSite);
   automaticPageCut(currentWebSite);
-
-  // orderWebPage(currentWebSite);
-  console.log(currentWebSite);
+  // console.log(currentWebSite);
 }
 
 function lastPageWeb() {
   currentWebSite = 42;
   askWebSite(42);
   automaticPageCut(currentWebSite);
-
-  console.log(currentWebSite);
+  // console.log(currentWebSite);
 }
 
+//funcion para evitar seguir cuando alcazamos el valor min o max de la webpage
 
 function automaticPageCut(webSide) {
   buttonPreviousPageWeb.disabled = currentWebSite === 1;
@@ -166,4 +145,9 @@ function automaticPageCut(webSide) {
   buttonLastPageWeb.disabled = currentWebSite === 42;
 }
 
+
+
+let totalPage = currentWebSite;
+
+document.getElementById("totalPage").textContent += currentWebSite;
 

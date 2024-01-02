@@ -9,6 +9,7 @@ unknownfilter = filtro Desconocido
 viewPlus = ver mas
 figure = descripcion de figuras
 imagin = imagen
+goUp = ir arriba
 
 totalCharacter = personajes totales
 idCharacter = caracteristicas de personajes
