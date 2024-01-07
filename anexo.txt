@@ -15,6 +15,7 @@ totalCharacter = personajes totales
 idCharacter = caracteristicas de personajes
 itemCharacter = caracteristicas del personaje
 character =  personajes
+numberCharacter = cantidad de personajes
 
 actualPage = pagina actual
 totalPage = paginas totales

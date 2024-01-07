@@ -2,13 +2,19 @@
 
 let character;
 let currentWebSite = 1;
+let spanidTotalCharacter = document.getElementById("totalCharacter");
 
 //funcion para mostrar los personajes en html
 
 function showMeOnHtml(arrCharacter) {
+  let numberCharacter = arrCharacter.length;
+  spanidTotalCharacter.innerText = numberCharacter
+
   idCharacter.innerHTML = " ";
+  console.log(arrCharacter)
   arrCharacter.forEach((itemCharacter) => {
     idCharacter.innerHTML += `<div class="idCharacter">
+                                  <div class="boxOne">
                                       <div>
                                         <img class="imagin" src=${itemCharacter.image}>
                                       </div>
@@ -17,15 +23,18 @@ function showMeOnHtml(arrCharacter) {
                                           <p>Genero: ${itemCharacter.gender}</p>
                                           <p>Species: ${itemCharacter.species}</p>
                                           <p>Status: ${itemCharacter.status}</p>
-                                          <p>Origin: ${itemCharacter.origin}</p>
-                                          <p>Location ${itemCharacter.location}</p>
+                                          <p>Origin: ${itemCharacter.origin.name}</p>
+                                          <p>Location ${itemCharacter.location.name}</p>
                                         </div>  
                                       <div class="viewPlus">
                                         <p class="verMas">VER MAS...</p>
                                       </div>
+                                  </div>
                               </div>`;
   });
 }
+
+
 
 //elementos HTML
 
@@ -147,7 +156,65 @@ function automaticPageCut(webSide) {
 
 
 
-let totalPage = currentWebSite;
 
-document.getElementById("totalPage").textContent += currentWebSite;
 
+
+
+
+
+
+
+
+
+
+//formula para saber que cantidad de persones hay por pagina
+
+// let totalPersonajes = document.getElementById("totalCharacter");
+
+// totalPersonajes = (totalCharacter/currentWebSite);
+// console.log(totalPersonajes)
+
+
+//formula para saber en que pagina estoy
+
+// let currentPagePath = window.location.pathname;
+
+// let paginasConocidas = [
+//   '/pagina1',
+//   '/pagina2',
+//   '/pagina3',
+//   '/pagina4',
+//   '/pagina5',
+//   '/pagina6',
+//   '/pagina7',
+//   '/pagina8',
+//   '/pagina9',
+//   '/pagina10',
+//   '/pagina11',
+//   '/pagina12',
+//   '/pagina13',
+//   '/pagina14',
+//   '/pagina15',
+//   '/pagina16',
+//   '/pagina17',
+//   '/pagina18',
+//   '/pagina19',
+//   '/pagina20',
+//   '/pagina21',
+//   // ...
+// ];
+
+// for (let i = 0; i < paginasConocidas.length; i++) {
+//   if (currentPagePath === paginasConocidas[i]) {
+//     // console.log('Estás en la página:', i + 1);
+//     document.getElementById("#actualPage").textContent += currentPagePath;
+//     break;
+//   }
+// }
+
+//fomula para saber la cantidad de paginas
+
+// let totalPage = currentWebSite;
+
+// document.getElementById("totalPage").textContent ="Total de páginas: " + currentWebSite;
+// totalPage.innerHTML = currentWebSite.lenght
