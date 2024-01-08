@@ -12,7 +12,6 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    
 }
 
 
@@ -24,7 +23,6 @@ h1{
     display:flex;
     justify-content: center;
     align-items: center;   
-   
 }
 
 #filter{
@@ -33,16 +31,24 @@ h1{
     display:flex;
     height: 30px;
     border-radius: 2px;
+}
 
+#allfilter, #womenfilter, #menfilter, #genderlessfilter, #unknownfilter{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#firstWebPage, #previousPageWeb, #nextWebPage, #lastPageWeb{
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 #idCharacter{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 50px;
-  
-    
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 .boxOne {
@@ -88,8 +94,7 @@ h5{
     align-items: center;
     gap: 10px;
     height: 100px;
-
-    }
+}
 
 .point {
     height: 50px;
@@ -119,9 +124,8 @@ footer{
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     padding-top: 1%;
-    padding-bottom: 2%;    
+    padding-bottom: 1%;    
 }
 
 @media screen and (max-width: 600px) {

@@ -26,14 +26,17 @@ function showMeOnHtml(arrCharacter) {
                                           <p>Origin: ${itemCharacter.origin.name}</p>
                                           <p>Location ${itemCharacter.location.name}</p>
                                         </div>  
-                                      <div class="viewPlus">
-                                        <p class="verMas">VER MAS...</p>
-                                      </div>
+                                      
                                   </div>
                               </div>`;
   });
 }
 
+//Opcion de ver mas, opcional
+
+                                 {/* <div class="viewPlus">
+                                        <p class="verMas">VER MAS...</p>
+                                      </div> */}
 
 
 //elementos HTML
